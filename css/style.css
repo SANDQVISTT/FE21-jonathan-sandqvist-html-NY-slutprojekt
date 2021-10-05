@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline:0;
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+}
+
+header{/* header som är en flexbox-header. texten i är jämt fördelad
+    tagit bort underlinjen till "länkarna"
+    den fastnar längst upp på hemsidan för att den är sticky och täcker hela sidan
+    horisontellt*/
+    height: 100px;
+    background:#ffffff;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    list-style-type:none;
+    border: 1px solid #333;
+    position: sticky; 
+    top: 0;
+    width: 100%;
+}
+ul{/*min ul *parent* är min lista av mina header. så mitt content är flex och 
+    inget sträck under sig på li länkarna  */
+    display: flex;
+    list-style-type:none;
+}
+ul li a{
+    justify-content: space-around;
+    padding: 10px;
+    text-decoration:none;
+    color: #333;
+    display: inline-block;
+}
+li a::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background: rgb(0, 0, 0);
+    transition:all .5s;
+}
+li a:hover::after{
+    width: 100%;
+}
+main{
+    height: auto;
+    
+}
+
+ .start { /* få min "rubrik" snyggt på plats i mitten med h1 som lite "snygga" färger på alla H1. */
+      padding: 3rem 0;
+      text-align: center;
+      border-bottom: #333 solid 1px;}
+      h1{
+        text-shadow: 2px 2px 5px red;}
+        
+   
+    
+.info {
+          display: grid;
+         text-align: center;
+         justify-items: center;
+          grid-row-gap: 1px;
+          grid-column-gap: 9px;
+          padding: 4rem;   
+      }
+        .info-2{
+          margin: auto;
+          padding: 10rem;
+
+      }
+.kontakt{/* få allt på min kontakt-sida på plats i mitten med GRID*/
+         display: grid;
+         text-align: center;
+         justify-items: center;
+          grid-row-gap: 1px;
+          grid-column-gap: 9px;
+          padding: 4rem; }
+.frukt{ /* min parent till alla projekt som får allt på plats och blir som flex. */
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+     grid-gap: 20px;
+     grid-auto-flow: dense;
+     min-height: 100%;
+    }
+
+   .fruktext{ /* avstånd till bilderna med texten*/
+     padding: 0 20px 20px; }
+ 
+ .frukt-img {/* border till bilderna */
+    border:1px solid gray}
+     .frukt > .frukt-img {
+        max-width: 100%;}
+
+.parent {/* flex , och wrap för dom inte ska gå över varnadra */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 40px ;
+    justify-content: space-evenly;
+    }
+
+  footer{ 
+    border: 1px solid  #333 ;
+    text-align: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    padding: 2rem;
+    margin-top: 10rem; 
+}
+
+
+
+
+
+
